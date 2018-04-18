@@ -1,1 +1,97 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+background: #eeeeee;
+}
+.miNavbar{
+  height: 70px;
+  background: #2196f3;
+  color: white;
+}
+#tituloProyecto{
+  padding-top: 10px;
+  padding-left: 10px;
+  font-size: 38px;
+}
+#iconoFileLan{
+height: auto;
+}
+
+#btnMenu{
+height: auto;
+
+}
+
+.cuadroLogin{
+padding: 40px;
+padding-top: 50px;
+margin: auto;
+width: 95%;
+max-height: 400px;
+background: white;
+box-shadow: 0 7px 10px 0 #aaa;
+}
+.loginRow{
+margin-top: 100px;
+}
+
+#contraseñaLogin{
+  margin-top: 20px;
+}
+#btnIngresar{
+
+  margin-top: 40px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:80%;
+  border: 2px solid #2196f3;
+  border-radius: 15px;
+  background:  #2196f3;
+  color:#ffffff;
+  padding: 3px;
+  font-size: 25px;
+  transition-duration: .3s;
+  cursor: pointer;
+
+
+}
+
+.inputsLogin{
+  width: 100%;
+  border: 2px solid #2196f3;;
+  border-radius: 5px;
+  outline: none;
+  padding: 6px;
+  transition: .3s;
+  color: #aaa;
+
+}
+.inputsLogin:focus{
+border-color: #2196f3;
+box-shadow: 0 0 7px 0 #2196f3;
+color: #aaa;
+}
+
+.textosLogin{
+color: #757575;
+}
+
+#imagenUserFileLan{
+  margin-top: -135px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.divImagenUser{
+width: 100%;
+text-align: center;
+}
+
+.barraLateral{
+background: #bdbdbd;
+color: #fff;
+font-size: 2px;
+}
+.textoOpcionesBarraLateral{
+color: #fff;
+font-size: 2px;
+}
