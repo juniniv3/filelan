@@ -24,7 +24,6 @@ class Permiso extends Migration
             $table->integer('usuario_id')->unsigned();
             $table->integer('archivo_id')->unsigned();
             $table->timestamps();
-       
             $table->foreign('usuario_id')->references('id')->on('usuarios');
             $table->foreign('archivo_id')->references('id')->on('archivos');
         });

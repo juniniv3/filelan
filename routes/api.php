@@ -19,7 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 */
 
-Route::resource('Archivos','Archivo\ArchivoController',['only'=> ['index', 'show', 'create', 'update', 'destroy']]);
+Route::resource('archivos','Archivo\ArchivoController',['only'=> ['index', 'show', 'create', 'update', 'destroy']]);
 Route::resource('Permisos','Permiso\PermisoController',['only'=> ['index', 'show', 'create', 'update', 'destroy']]);
 Route::resource('Restricciones','Restriccion\RestriccionController',['only'=> ['index', 'show', 'create', 'update', 'destroy']]);
 Route::resource('roles','Rol\RolController',['only'=> ['index', 'show','store', 'create', 'update', 'destroy']]);
