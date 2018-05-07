@@ -11,6 +11,7 @@ class Rol extends Model
         'tipo',
         'descripcion'
     ];
+    public $timestamps = false;
 
     public function restricciones(){
         return $this->hasMany(Restriccion::class);

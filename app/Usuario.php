@@ -12,16 +12,17 @@ class Usuario extends Model
         'nombre',
         'correo',
         'cuenta',
-        'contraseña',
-        'codigoVerificacion',
+        'contrasena',
         'fechaRegistro',
     ];
 
 
     protected $hidden =[
-        'contraseña',
-        'codigoVerificacion',
+      'contrasena',
+      
     ];
+
+    public $timestamps = false;
 
 
     public static function generarCodigoVerificacion(){

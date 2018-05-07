@@ -11,9 +11,10 @@ class Permiso extends Model
     protected $fillable =[
         'nombre',
         'nivel',
-        'usuario_id',
-        'archivo_id'
+        'usuarios_id',
+        'archivos_id'
         ];
+            public $timestamps = false;
 
     public function usuario(){
         return $this->belongsTo(Usuario::class);

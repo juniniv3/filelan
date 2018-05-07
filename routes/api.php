@@ -19,10 +19,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 */
 
-Route::resource('archivos','Archivo\ArchivoController',['only'=> ['index', 'show', 'create', 'update', 'destroy']]);
-Route::resource('Permisos','Permiso\PermisoController',['only'=> ['index', 'show', 'create', 'update', 'destroy']]);
-Route::resource('Restricciones','Restriccion\RestriccionController',['only'=> ['index', 'show', 'create', 'update', 'destroy']]);
+Route::resource('archivos','Archivo\ArchivoController');
+Route::resource('permisos','Permiso\PermisoController',['only'=> ['index', 'show', 'create', 'update', 'destroy']]);
+Route::resource('restricciones','Restriccion\RestriccionController',['only'=> ['index', 'show', 'create', 'update', 'destroy']]);
 Route::resource('roles','Rol\RolController',['only'=> ['index', 'show','store', 'create', 'update', 'destroy']]);
-Route::resource('Sesiones','Sesion\SesionController',['only'=> ['index', 'show', 'create', 'update', 'destroy']]);
+Route::resource('sesiones','Sesion\SesionController',['only'=> ['index', 'show', 'create', 'update', 'destroy']]);
 Route::resource('usuarios','Usuario\UsuarioController',['only'=> ['index', 'show','store', 'create', 'update', 'destroy']]);
-

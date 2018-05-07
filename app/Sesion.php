@@ -9,7 +9,7 @@ class Sesion extends Model
 {
     protected $fillable =[
         'fecha',
-        'usuario_id'
+        'usuarios_id'
     ];
 
     protected function usuario(){

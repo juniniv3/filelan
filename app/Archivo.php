@@ -15,6 +15,8 @@ class Archivo extends Model
         'ultimaModificacion',
     ];
 
+    public $timestamps = false;
+
     public function permisos(){
         return $this->hasMany(Permiso::class);
     }
