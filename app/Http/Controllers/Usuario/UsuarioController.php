@@ -31,7 +31,7 @@ class UsuarioController extends Controller
 
                 if(  Crypt::decrypt($usuario->contrasena) ==$campos['contrasenaUsuario']){
 
-                  return response()->json([$usuario]);
+                  return response()->json($usuario);
 
                 }else{
 

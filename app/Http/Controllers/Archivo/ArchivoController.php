@@ -126,11 +126,12 @@ if($request->hasFile('file')){
 
             if (file_exists($rutaDescarga)) {
               //  return Response::download($path);
-                error_log("entro");
-                //$visibility = Storage::getVisibility('public/usuarios/1/archivo11.docx');
-                error_log(public_path());
+        
+    return Storage::download($rutaDescarga, Str::ascii($nombreArchivo));
+              }else{
 
-                        }
+                return "la id del archivo es invalida";
+              }
 
       // return response()->download("storage/usuarios/1/archivo11.docx","archivo11.docx","inline" );
         return Storage::download($rutaDescarga, Str::ascii($nombreArchivo));

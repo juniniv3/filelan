@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
-
+use app\Usuario;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -25,3 +25,10 @@ Route::resource('restricciones','Restriccion\RestriccionController',['only'=> ['
 Route::resource('roles','Rol\RolController',['only'=> ['index', 'show','store', 'create', 'update', 'destroy']]);
 Route::resource('sesiones','Sesion\SesionController',['only'=> ['index', 'show', 'create', 'update', 'destroy']]);
 Route::resource('usuarios','Usuario\UsuarioController',['only'=> ['index', 'show','store', 'create', 'update', 'destroy']]);
+
+
+Route::get('api/usuarios/mostrarusuarios', function()
+{
+  $usuarios = Usuario::all();
+    return "xasdadasd";
+});

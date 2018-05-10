@@ -9,6 +9,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Restriccion extends Model
 {
+
+   protected $table = 'Restricciones';
     protected $fillable =[
         'rols_id',
         'usuarios_id'
