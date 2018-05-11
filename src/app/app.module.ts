@@ -6,13 +6,20 @@ import { LoginComponent } from './login/login.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PrincipalComponent } from './principal/principal.component';
+import { ArchivosService}  from '../app/servicios/archivos.service';
+import { UsuariosService}  from '../app/servicios/usuarios.service';
+import {HttpClientModule} from '@angular/common/http';
+import {FormsModule} from '@angular/forms';
+import { RegistroComponent } from './registro/registro.component';
+
 
 
 const routes: Routes =[
   {path: '', component:InicioComponent},
   {path: 'inicio', component:InicioComponent},
   {path:'login', component:LoginComponent},
-  {path:'principal',component:PrincipalComponent}
+  {path:'principal',component:PrincipalComponent},
+  {path:'registro',component:RegistroComponent}
 
 ];
 
@@ -22,13 +29,20 @@ const routes: Routes =[
     LoginComponent,
     InicioComponent,
     NavbarComponent,
-    PrincipalComponent
+    PrincipalComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
+    HttpClientModule,
+    FormsModule,
+
   ],
-  providers: [],
+  providers: [
+    ArchivosService,
+    UsuariosService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

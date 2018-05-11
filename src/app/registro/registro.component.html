@@ -1,0 +1,36 @@
+<div class="cuadroRegistro">
+
+  <div class="divImagenUser">
+
+    <img src="assets/userFileLan.png" id="imagenUserFileLan" alt="Smiley face" height="120px" width="120px">
+
+</div>
+
+    <form (ngSubmit)="registroUsuario()" #formRegistro ="ngForm" >
+      
+      <label class="textosLogin" for="nombreUsuario" >Nombre</label>
+
+      <input class="inputsLogin" id="nombreUsuario" type="text" placeholder="Nombre Usuario" 
+      name="nombreUsuario" ngModel>
+
+      <label class="textosLogin" for="correoUsuario" >Correo</label>
+
+      <input class="inputsLogin" id="correoUsuario" type="email" placeholder="Correo Electrónico" 
+      name="correoUsuario" ngModel>
+
+
+      <label class="textosLogin" for="cuentaUsuario" >Usuario</label>
+
+        <input class="inputsLogin" id="cuentaUsuario" type="text" placeholder="Usuario" 
+        name="cuentaUsuario" ngModel>
+
+        <label class="textosLogin"  for="contrasenaUsuario">Contraseña</label>
+
+        <input class="inputsLogin" placeholder="Contrasena" type="password"
+         id="contraseñaUsuario" name="contrasenaUsuario" ngModel >
+        <br>
+
+      
+          <button id="btnIngresar" type="submit">Registrarse</button>
+      </form>
+      </div>

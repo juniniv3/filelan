@@ -1,8 +1,9 @@
-<nav>
-    <div class="row miNavbar">
+<nav >
+    <div class="row miNavbar fixed-top">
 
-      <div class="col-1"></div>
-      <div class="col-5 d-flex flex-nowrap">
+
+      <div class="col-12 col-md-1"></div>
+      <div class="col-12 col-lg-5 d-flex flex-nowrap">
 
         <svg  id="iconoFileLan" fill="white" height="50" viewBox="0 0 24 24" width="50" xmlns="http://www.w3.org/2000/svg">
             <path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/>
@@ -10,18 +11,48 @@
         </svg>
               <h3 id="tituloProyecto">FileLan</h3>
       </div>
-      <div class="col-5"></div>
-      <div class="col-md-2 col-lg-1 d-flex justify-content-end">
-        <svg id='btnMenu' fill="#ffffff" height="60" viewBox="0 0 24 24" width="60" xmlns="http://www.w3.org/2000/svg">
+      <div class="col-12 col-md-4 col-lg-5"></div>
+      
+      <div (click)="onActivarOpciones()" class="col-12 col-md-2 col-lg-1 d-flex justify-content-end">
+        <svg  style="padding-right:10px;" id='btnMenu' fill="#ffffff" height="60" viewBox="0 0 24 24" width="60" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 0h24v24H0z" fill="none"/>
             <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
         </svg>
 
+        
 
 </div>
 
 
+        <div [hidden]="!activarOpciones" class="col-12 opcionesNavbar">
+            <div class="row">
+                    <div class="col-8 ">
+                        <div class="row">
+                      
+                            <div class="col-2">
+                             
+                                    <h4 class="textoOpcionesNavbar" routerLink="/inicio">Inicio</h4>
+                            </div>
+                            <div *ngIf="usuarioLogeado" class="col-2">
+                                    <h4 class="textoOpcionesNavbar" routerLink="/principal" >Principal</h4>
+                       
+                            </div>
+                            <div *ngIf="!usuarioLogeado" class="col-2">
+                                    <h4 class="textoOpcionesNavbar" routerLink="/login" >Login</h4>
+                            </div>
 
+                            <div *ngIf="usuarioLogeado" (click)="deslogear()" class="col-2">
+                                    <h4 class="textoOpcionesNavbar" routerLink="/login" >Salir</h4>
+                            </div>
+                        </div>
+                    
+                    </div>
+                    <div class="col-4">
+                       
+                    </div>
+
+            </div>
+        </div>
 
     </div>
 

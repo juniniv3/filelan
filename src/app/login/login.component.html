@@ -11,17 +11,24 @@
 
 </div>
 
-      <h4 class="textosLogin">Usuario</h4>
+    <form (ngSubmit)="login()" #formIngreso ="ngForm" >
+      <label class="textosLogin" for="cuentaUsuario" >Usuario</label>
 
-      <input class="inputsLogin" type="text" placeholder="Usuario" name="" value="">
+        <input class="inputsLogin" id="cuentaUsuario" type="text" placeholder="Usuario" 
+        name="cuentaUsuario" ngModel>
 
-      <h4 class="textosLogin" id="contraseñaLogin">Contraseña</h4>
+        <label class="textosLogin"  for="contrasenaUsuario">Contraseña</label>
 
-      <input class="inputsLogin" placeholder="Contraseña" type="password" name="" value="">
-      <br>
+        <input class="inputsLogin" placeholder="Contrasena" type="password"
+         id="contraseñaUsuario" name="contrasenaUsuario" ngModel >
+        <br>
+          <h3  class="textoIrRegistro" (click)="irRegistro()"> Registro</h3>
 
-      <input type="button" id="btnIngresar" name="" value="Ingresar">
-    </div>
+      
+          <button id="btnIngresar" type="submit">Ingresar</button>
+
+      </form>
+      </div>
 
   </div>
 
